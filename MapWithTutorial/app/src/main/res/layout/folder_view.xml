@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_fv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?android:attr/actionModeCloseDrawable"
+            android:visibility="visible"
+            android:layout_weight="0.92" />
+
+        <ViewFlipper
+            android:id="@+id/V_Flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                layout="@layout/owner_layout" />
+            <include
+                layout="@layout/settings_layout" />
+        </ViewFlipper>
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>
