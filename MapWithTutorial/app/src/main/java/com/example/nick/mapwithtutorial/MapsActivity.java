@@ -18,11 +18,13 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Parcelable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -190,16 +192,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             });
         }
-        // Add a marker in Sydney and move the camera
-        start_stats();
-
-
-        mMap.setMyLocationEnabled(true);
-
-        //Location m = mMap.getMyLocation();
+        if(checkPermission(Manifest.permission.ACCESS_FINE_LOCATION, this.getTaskId(), this.getBaseContext().getApplicationInfo().uid) == PackageManager.PERMISSION_GRANTED)
+            mMap.setMyLocationEnabled(true);
 
         mMap.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
-
             @Override
             public void onMyLocationChange(Location arg0) {
                 // TODO Auto-generated method stub
@@ -207,12 +203,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 update_to_position();
             }
         });
+        // Add a marker in Sydney and move the camera
+        //start_stats();
     }
 
     public Location getMy_loc(){
         return my_loc;
     }
-
 
     /**
      * Moves camera to start position || moves camera to last position

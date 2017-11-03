@@ -16,12 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.nick.mapwithtutorial.MapsActivity" />
-
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -30,12 +24,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
-
-        <include
-            android:id="@+id/LowMenuInc"
-            layout="@layout/bottom_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-        />
 
 </android.support.v4.widget.DrawerLayout>

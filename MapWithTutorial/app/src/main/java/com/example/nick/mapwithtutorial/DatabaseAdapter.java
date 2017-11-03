@@ -4,7 +4,7 @@ package com.example.nick.mapwithtutorial;
  * Created by Nick on 08.10.2017.
  */
 
-public class DBConnector {
+public class DatabaseAdapter {
 /**
  * //first sector connection
  * //second sector connection

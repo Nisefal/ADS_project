@@ -15,7 +15,9 @@ import android.view.MotionEvent;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-public class MenuActivity extends AppCompatActivity
+import com.google.android.gms.maps.MapFragment;
+
+public class MapMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -24,6 +26,7 @@ public class MenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_maps);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //Fragment map = (Fragment) findViewById(R.id.map)
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
