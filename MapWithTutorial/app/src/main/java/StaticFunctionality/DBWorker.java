@@ -1,10 +1,10 @@
-package com.example.nick.mapwithtutorial;
+package StaticFunctionality;
 
 /**
  * Created by Nick on 08.10.2017.
  */
 
-public class DatabaseAdapter {
+public class DBWorker {
 /**
  * //first sector connection
  * //second sector connection

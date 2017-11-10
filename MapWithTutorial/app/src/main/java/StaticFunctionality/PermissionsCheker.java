@@ -1,4 +1,4 @@
-package com.example.nick.mapwithtutorial;
+package StaticFunctionality;
 
 /**
  * Created by Nick on 23.10.2017.

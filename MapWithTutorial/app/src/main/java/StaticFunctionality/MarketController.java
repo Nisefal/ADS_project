@@ -1,4 +1,4 @@
-package com.example.nick.mapwithtutorial;
+package StaticFunctionality;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,6 +12,8 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+
+import StaticFunctionality.Cropper;
 
 
 /**
@@ -27,7 +29,7 @@ public class MarketController {
             if(price == null || price == "") {return;}
             if(map == null) {return;}
 
-            BitmapDescriptor pic = BitmapDescriptorFactory.fromBitmap(Croper.cropCircle(bit));
+            BitmapDescriptor pic = BitmapDescriptorFactory.fromBitmap(Cropper.cropCircle(bit));
 
             Marker tmp = map.addMarker(new MarkerOptions()
                     .position(lg)

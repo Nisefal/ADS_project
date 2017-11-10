@@ -16,6 +16,8 @@ import com.google.android.gms.maps.model.Marker;
 
 import java.util.ArrayList;
 
+import StaticFunctionality.MarketController;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
